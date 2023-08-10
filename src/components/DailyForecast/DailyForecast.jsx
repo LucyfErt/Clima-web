@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "./DailyForecast.css";
 import { ENV } from "../../config/env";
+import {TiWeatherSunny, TiWeatherCloudy, TiWeatherStormy} from 'react-icons/ti';
 
-function DailyForecast({ city }) {
+function DailyForecast({ city, hour }) {
   const apiKey = ENV.API_KEY;
 
   const [weeklyForecast, setWeeklyForecast] = useState(null);
@@ -43,12 +44,16 @@ function DailyForecast({ city }) {
     <div className="daily-forecast">
       {weeklyForecast === null ? (
         <p>Loading...</p>
-      ) : (
+        ) : (
+          
         <div className="Dayli">
           {Object.entries(groupForecastByDate(weeklyForecast.list)).map(([date, forecasts]) => (
             <div key={date}>
               <h3>Date: {date}</h3>
+
+
               {forecasts.map((forecastItem) => (
+                
                 <div key={forecastItem.dt}>
                   <div className="weather">
                     <p>Time: {new Date(forecastItem.dt * 1000).toLocaleTimeString()}</p>

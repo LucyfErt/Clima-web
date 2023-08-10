@@ -60,8 +60,6 @@ function LocationSearch() {
     dispatch({type: "HIDE_FORECAST"});
   }, [state.city]);
 
-  console.log("Data:", state.data);
-
   return (
     <div className="app">
       <div className="search">
@@ -73,7 +71,6 @@ function LocationSearch() {
           type="text"
           className="input"
         />
-        <button onClick={searchLocation}></button>
       </div>
       <div className="container">
         <div className="top">

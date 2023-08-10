@@ -1,5 +1,5 @@
 .app {
-  text-align: center;
+  text-align: right;
   margin-top: 40px;
   color: #f5f3f4;
   margin-right: 20px; /* Ajusta este valor según tu preferencia para dejar un espacio entre el contenido y el borde derecho */
@@ -12,14 +12,14 @@
 
 .input {
   border-radius: 10px;
-  outline: 2px solid #1b53b5;
   border: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   background-color: #e2e2e2;
   outline-offset: 3px;
   padding: 10px 1rem;
   transition: 0.25s;
-  width: 300px; /* Ajusta el ancho del buscador según tu preferencia */
+  width: 200px; /* Ajusta el ancho del buscador según tu preferencia */
+  align-items: center;
 }
 
 .input:focus {
@@ -62,34 +62,14 @@
   font-size: 2rem; /* Ajusta este valor según tu preferencia para cambiar el tamaño del icono */
   margin: 0;
 }
+
 .location{
   font-size: 1rem;
   font-size: 20px;
   font-weight: bold;
 }
 
-.description{
-  font-size: 1rem;
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.feels{
-  text-align: right;
-  font-size: 1rem;
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.humidity{
-  text-align: right;
-  font-size: 1rem;
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.wind{
-  text-align: right;
+.description .feels .humidity .wind {
   font-size: 1rem;
   font-size: 20px;
   font-weight: bold;
@@ -99,11 +79,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  width: 55%; /* La card ocupará la mitad del ancho de la pantalla */
-  height: 100vh; /* La card ocupará toda la altura de la pantalla */
-  background-color: #231942; /* Reemplazar 'ruta/de/la/imagen.jpg' con la ruta de la imagen que desees usar como fondo */
-  border-radius: 20px 0 0 20px ; /* Agregar bordes redondeados a la card */
+  justify-content:center;
+  width: 100%; /* La card ocupará la mitad del ancho de la pantalla */
+  height: 50vh; /* La card ocupará toda la altura de la pantalla */
+ background-image:url('../../assets/img/tumblr_ohtkclD3aC1s3zokdo1_1280.jpg') ; /* Reemplazar 'ruta/de/la/imagen.jpg' con la ruta de la imagen que desees usar como fondo */
+  border-radius: 10px  ; /* Agregar bordes redondeados a la card */
   color: white; /* Color del texto dentro de la card */
   font-size: 18px; /* Tamaño de la fuente del texto dentro de la card */
 }
@@ -122,19 +102,15 @@
 
 .card-2 {
   background-color: #5e548e; /* Color gris */
-  border-radius: 0 20px 20px 0;
+  border-radius: 10px ;
   width: 45%; /* Ocupa la mitad derecha de la pantalla */
   float: right; /* Alinea el card a la derecha */
   box-sizing: border-box; /* Incluye el padding y el borde dentro del ancho total */
-  padding: 30px; /* Espacio interior del card */
-  height: 100vh;
+  padding: 20px; /* Espacio interior del card */
+  height: 55vh;
+  margin-top: 20px;
 }
-/* LocationSearch.css */
 
-.card-container {
-  display: flex; /* Utiliza el modelo flexbox */
-  justify-content: space-between; /* Espacio entre los elementos */
-}
 
 .card-2 p {
   font-size: 20px;
@@ -142,4 +118,8 @@
 .card-2 .search {
   display: flex;
   justify-content: flex-end; 
+}
+.search{
+  text-align: center;
+  margin-bottom: 5px;
 }
